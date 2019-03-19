@@ -269,3 +269,78 @@ h1 span {
   top: -23px;
   opacity: 1;
 }
+
+.progress-bar--3 {
+  height: 5px;
+  background-color: #efefef;
+}
+.progress-bar--3:nth-child(1) .progress-bar__bar-inner,
+.progress-bar--3:nth-child(1) .progress-bar__value {
+  background-color: #F40076;
+}
+.progress-bar--3:nth-child(1) .progress-bar__bar-inner:after,
+.progress-bar--3:nth-child(1) .progress-bar__value:after {
+  border-top-color: #F40076;
+}
+.progress-bar--3:nth-child(2) .progress-bar__bar-inner,
+.progress-bar--3:nth-child(2) .progress-bar__value {
+  background-color: #1A936F;
+}
+.progress-bar--3:nth-child(2) .progress-bar__bar-inner:after,
+.progress-bar--3:nth-child(2) .progress-bar__value:after {
+  border-top-color: #1A936F;
+}
+.progress-bar--3:nth-child(3) .progress-bar__bar-inner,
+.progress-bar--3:nth-child(3) .progress-bar__value {
+  background-color: #2274A5;
+}
+.progress-bar--3:nth-child(3) .progress-bar__bar-inner:after,
+.progress-bar--3:nth-child(3) .progress-bar__value:after {
+  border-top-color: #2274A5;
+}
+
+.progress-bar__skill--3 {
+  position: absolute;
+  top: -24px;
+  left: -20px;
+  opacity: 0;
+}
+.progress-bar__skill--3.js-animated {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  left: 0;
+  opacity: 1;
+}
+
+.progress-bar__value--3 {
+  position: absolute;
+  top: -43px;
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 10px;
+  color: #fff;
+  opacity: 0;
+}
+.progress-bar__value--3:after {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  display: block;
+  width: 0;
+  height: 0;
+  content: '';
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top: 5px solid;
+}
+.progress-bar__value--3.js-animated {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0.45s;
+  top: -33px;
+  opacity: 1;
+}
