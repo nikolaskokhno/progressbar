@@ -62,7 +62,8 @@ h1 span {
 }
 
 .content-block__effect {
-  margin-bottom: 50px;
+  margin-bottom: 200px;
+  margin-top: 200px;
 }
 
 .progress-container {
@@ -201,5 +202,70 @@ h1 span {
   transition-timing-function: linear;
   transition-delay: 0s;
   right: 0;
+  opacity: 1;
+}
+
+/* progress bar #2 styles */
+.progress-bar--2 {
+  height: 20px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+@-webkit-keyframes progress-2-bg-animation {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 0, 42px 0;
+  }
+}
+
+@keyframes progress-2-bg-animation {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 0, 42px 0;
+  }
+}
+.progress-bar__bar-inner--2 {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.2)), linear-gradient(135deg, #5EEB5B, #5EEB5B 33%, #358600 33%, #358600 66%, #5EEB5B 66%);
+  background-size: 100% 100%, 42px 100%;
+  background-position: 0 0, 0 0;
+  border-radius: 3px;
+}
+.progress-bar__bar-inner--2.js-animated {
+  -webkit-animation: progress-2-bg-animation 1.5s linear 0s infinite;
+          animation: progress-2-bg-animation 1.5s linear 0s infinite;
+}
+
+.progress-bar__skill--2 {
+  position: absolute;
+  top: -33px;
+  left: 0;
+  opacity: 0;
+}
+.progress-bar__skill--2.js-animated {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: -23px;
+  opacity: 1;
+}
+
+.progress-bar__value--2 {
+  position: absolute;
+  top: -33px;
+  right: 0;
+  opacity: 0;
+}
+.progress-bar__value--2.js-animated {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: -23px;
   opacity: 1;
 }
